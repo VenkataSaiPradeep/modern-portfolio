@@ -127,7 +127,7 @@ const Portfolio = () => {
       <p className="about-description">
         I'm a passionate software engineer with hands-on experience in building scalable web applications,
         designing robust system architectures, and optimizing performance. I specialize in crafting
-        end-to-end solutions using technologies like <strong>React</strong>, <strong>Python</strong>, 
+        end-to-end solutions using technologies like <strong>React</strong>, <strong>Python</strong>, <strong>TypeScript</strong>,
         <strong> AWS</strong>, and <strong>PostgreSQL</strong>. I enjoy transforming ideas into
         impactful products, collaborating across teams, and continuously learning new technologies.
       </p>
