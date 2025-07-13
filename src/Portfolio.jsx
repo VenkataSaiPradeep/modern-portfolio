@@ -10,6 +10,11 @@ import { FiDownload } from 'react-icons/fi';
 
 const projects = [
   {
+    title: 'Chatbot Flow Builder',
+    description: 'Built a Chatbot Flow Builder using React, React Flow, and JavaScript with a drag-and-drop UI for designing chatbot logic. Managed code via GitHub and deployed seamlessly on Vercel, ensuring responsive design, smooth user experience, and clean code practices.',
+    link: 'https://github.com/VenkataSaiPradeep/Chatbot-flow-builder',
+  },
+  {
     title: 'AI Resume Optimizer',
     description: 'Developed a full-stack AI-powered platform that analyzes resumes and provides career feedback, reducing review time by 90% through automated suggestions.Integrated GroqAPI to deliver personalized resume feedback aligned with job descriptions, increasing user satisfaction scores by 35%.',
     link: 'https://github.com/VenkataSaiPradeep/AI-Resume-Optimizer',
