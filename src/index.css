@@ -3,6 +3,8 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  background: var(--bg);
+  color: var(--text);
 }
 
 /* Light/Dark Theme Variables */
@@ -11,6 +13,7 @@ body {
   --card-bg: #fff;
   --accent: #7febd1;
   --text: #1a202c;
+  --border: #e2e8f0;
 }
 
 body.dark {
@@ -18,6 +21,7 @@ body.dark {
   --card-bg: #1e1e1e;
   --accent: #7febd1;
   --text: #f0f0f0;
+  --border: #2d2d2d;
 }
 body.dark {
   background: linear-gradient(to right, #141e30, #243b55);
@@ -36,7 +40,7 @@ body.light {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -381,7 +385,7 @@ html {
 
 .timeline {
   position: relative;
-  padding: 4rem 0;
+  padding: 2rem 0;
   width: 100%;
   min-height: 100vh;
 }
@@ -414,6 +418,7 @@ html {
   background-color: rgba(167, 139, 250, 0.1);
   width: 45%;
   padding: 1.5rem;
+  padding-left: 1.35rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(167, 139, 250, 0.3);
   position: relative;
@@ -422,7 +427,7 @@ html {
 
 .timeline-dot {
   position: absolute;
-  top: 1.5rem;
+  top: 3.8rem;
   left: 50%;
   transform: translateX(-50%);
   width: 16px;
@@ -448,7 +453,7 @@ html {
 }
 
 .company {
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 0.8rem;
   color: #999;
 }
@@ -472,18 +477,18 @@ html {
   .timeline-item.left {
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 30px;
+    margin-right: 50px;
   }
 
   .timeline-content {
     width: 100%;
-    margin: 0;
-    margin-right: 50px;
+    margin: 5px;
+    margin-right: 100px;
   }
 
   .timeline-dot {
     left: -3px;
-    top: 0.5rem;
+    top: 3.8rem;
     transform: none;
   }
 }
@@ -740,4 +745,340 @@ gap: 2rem;
   .about-buttons {
     justify-content: center;
   }
+}
+
+* {
+  transition: all 0.3s ease;
+}
+
+/* Improved button hover effects */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #7febd1, #8f94fb);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(127, 235, 209, 0.3);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #6055de, #7febd1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(127, 235, 209, 0.4);
+}
+
+/* Enhanced card hover effects */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border: 2px solid #64ffda;
+  box-shadow: 0 15px 35px rgba(167, 139, 250, 0.3);
+}
+
+body.light .card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced skills tags */
+.tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tag:hover {
+  background: rgba(127, 235, 209, 0.2);
+  border: 1px solid #7febd1;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(127, 235, 209, 0.3);
+}
+
+body.light .tag {
+  background: #f0f4f8;
+  color: #2d3748;
+  border: 1px solid #e2e8f0;
+}
+
+body.light .tag:hover {
+  background: #e6fffa;
+  border: 1px solid #7febd1;
+  color: #234e52;
+}
+
+/* Enhanced timeline */
+.timeline-content {
+  background: rgba(167, 139, 250, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  background: rgba(167, 139, 250, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.25);
+}
+
+/* Enhanced education items */
+.education-item {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(127, 235, 209, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.education-item:hover::before {
+  left: 100%;
+}
+
+.education-item:hover {
+  transform: translateY(-3px);
+}
+
+/* Enhanced contact form */
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #7febd1;
+  box-shadow: 0 0 0 3px rgba(127, 235, 209, 0.1);
+  transform: translateY(-2px);
+}
+
+.contact-form button {
+  background: linear-gradient(135deg, #7febd1, #8f94fb);
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.contact-form button:hover::before {
+  left: 100%;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #8ae5d0, #6055de);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(127, 235, 209, 0.4);
+}
+
+/* Enhanced navigation */
+.top-nav {
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+}
+
+.nav-right a {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-right a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background: #d6bcfa;
+  transition: all 0.3s ease;
+}
+
+.nav-right a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/*image anime*/
+
+/* Enhanced project tech tags */
+.project-tech .tag {
+  font-size: 0.75rem !important;
+  padding: 0.3rem 0.8rem !important;
+  margin: 0.2rem !important;
+  background: rgba(127, 235, 209, 0.1);
+  border: 1px solid rgba(127, 235, 209, 0.3);
+  color: #7febd1;
+}
+
+/* Enhanced success message animation */
+.success-message {
+  animation: slideInFromTop 0.5s ease-out;
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced loading button */
+.contact-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Smooth scroll enhancement */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .about-buttons {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .timeline-content {
+    padding: 1.2rem;
+  }
+}
+
+/* Enhanced theme transition */
+body {
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Enhanced footer */
+.made-with-love {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.made-with-love:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Add subtle parallax effect to hero */
+.hero {
+  position: relative;
+  background-attachment: fixed;
+}
+
+/* Enhanced section spacing */
+section {
+  margin-bottom: 5rem;
+}
+
+section h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Add glow effect to accent elements */
+.theme-btn:hover,
+.download-btn:hover,
+.about-buttons a:hover {
+  box-shadow: 0 0 20px rgba(127, 235, 209, 0.5);
+}
+
+/* Enhanced link hover effects */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(127, 235, 209, 0.1);
+  border: 1px solid rgba(127, 235, 209, 0.3);
+}
+
+.btn:hover {
+  background: rgba(127, 235, 209, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(127, 235, 209, 0.3);
 }
