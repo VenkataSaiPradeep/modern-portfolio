@@ -307,7 +307,7 @@ const Portfolio = () => {
             </div>
             <a href="https://github.com/VenkataSaiPradeep" className="download-btn" target="_blank" rel="noopener noreferrer">
                     <FaGithub style={{ marginRight: '5px' }} />
-                    Other Projects
+                    More Projects
                     {/*<FaExternalLinkAlt style={{ marginLeft: '5px', fontSize: '0.8rem' }} />*/}
                   </a>
           </section>
