@@ -241,7 +241,7 @@ const Portfolio = () => {
                 ],
               },
               {
-                role: 'Programmer Analyst Intern',
+                role: 'Programmer Analyst',
                 company: 'Cognizant Technology Solutions',
                 location: 'Remote, India',
                 duration: 'June 2021 – July 2022',
