@@ -216,10 +216,22 @@ const Portfolio = () => {
             <h2><FaBriefcase style={{ marginRight: '10px' }} />Experience</h2>
             {[
               {
+                role: 'Software Engineer',
+                company: 'Microsoft Corporation',
+                location: 'Tempe, AZ',
+                duration: 'Mar 2026 – Present',
+                logo: CognizantLogo,
+                bullets: [
+                  'Developed and maintained comprehensive unit test suites in C#/.NET for mission-critical Azure Core Compute Data Center Manager services, achieving 99% code coverage and eliminating all flaky tests, resulting in a 40% reduction in production defects across a large-scale distributed compute system.',
+                  'Identified and fixed high-severity bugs in DCM agent pipelines, reducing agent-related production incidents by 45% and improving SLA compliance for mission-critical compute services.',
+                  'Enhanced core DCM service reliability and operational readiness by improving service health checks, refining failure-handling logic,and strengthening monitoring pipelines; successfully ramped up on-call responsibilities, reducing incident resolution time by 30% and improving service stability across Azure regions.',
+                ],
+              },
+              {
                 role: 'Software Developer',
                 company: 'Global Apps Inc',
                 location: 'Santa Clara, CA',
-                duration: 'Mar 2025 – Present',
+                duration: 'Mar 2025 – Mar 2026',
                 logo: globallogo,
                 bullets: [
                   'Designed and deployed scalable REST APIs using Python (FastAPI), optimizing algorithm performance and reducing API latency by 25% through asynchronous processing and data caching.',
@@ -238,18 +250,6 @@ const Portfolio = () => {
                   'Designed custom search logic for educational content, reducing retrieval time by 60%.',
                   'Integrated Stripe API to enable subscription-based payments, increasing revenue by 25%.',
                   'Managed user authentication and data with Clerk and PostgreSQL, scaling to 500+ users.',
-                ],
-              },
-              {
-                role: 'Programmer Analyst',
-                company: 'Cognizant Technology Solutions',
-                location: 'Remote, India',
-                duration: 'June 2021 – July 2022',
-                logo: CognizantLogo,
-                bullets: [
-                  'Developed a scalable Banking Management System using Java, meeting all functional and non-functional specifications.',
-                  'Translated PDF-based requirements into modular OOP components, reducing manual error by 50%.',
-                  'Delivered fully tested product demo with 100% pass rate on functional scenarios',
                 ],
               },
             ].map((exp, i) => (
