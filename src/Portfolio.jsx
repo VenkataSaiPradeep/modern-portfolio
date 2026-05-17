@@ -135,9 +135,9 @@ const Portfolio = () => {
                 Software Engineer | Full-Stack Developer | Cloud Enthusiast
               </p>
               <p className="about-description">
-                I'm a passionate software engineer with hands-on experience in building scalable web applications,
+                I'm a software engineer currently working for Microsoft with hands-on experience in building scalable web applications,
                 designing robust system architectures, and optimizing performance. I specialize in crafting
-                end-to-end solutions using technologies like <strong>React</strong>, <strong>Python</strong>, <strong>Java</strong>, <strong>Node.js</strong>, <strong>TypeScript</strong>,
+                end-to-end solutions using technologies like <strong>React</strong>, <strong>Python</strong>, <strong>Java</strong>, <strong>C#</strong>, <strong>TypeScript</strong>,
                 <strong> AWS</strong>, and <strong>PostgreSQL</strong>. I enjoy transforming ideas into
                 impactful products, collaborating across teams, and continuously learning new technologies.
               </p>
