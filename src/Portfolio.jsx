@@ -7,6 +7,7 @@ import jntuklogo from './Jntuk-logo.png';
 import asuimg from './asuimg.jpeg';
 import CognizantLogo from './Cognizant-logo.jpeg';
 import globallogo from './globalappslogo.jpeg';
+import microsoftlogo from './microsoft-logo.png';
 
 const projects = [
   {
@@ -220,7 +221,7 @@ const Portfolio = () => {
                 company: 'Microsoft Corporation',
                 location: 'Tempe, AZ',
                 duration: 'Mar 2026 – Present',
-                logo: CognizantLogo,
+                logo: microsoftlogo,
                 bullets: [
                   'Developed and maintained comprehensive unit test suites in C#/.NET for mission-critical Azure Core Compute Data Center Manager services, achieving 99% code coverage and eliminating all flaky tests, resulting in a 40% reduction in production defects across a large-scale distributed compute system.',
                   'Identified and fixed high-severity bugs in DCM agent pipelines, reducing agent-related production incidents by 45% and improving SLA compliance for mission-critical compute services.',
